@@ -9,6 +9,8 @@ export class LandingPageComponent implements OnInit {
 
   displayStories: any;
   detailesToShare : string = "";
+  correctEmail = true;
+  user : string = "";
   imgsrc = "./../../../assets/pictures/more.svg"
   constructor() {
 
@@ -18,16 +20,12 @@ export class LandingPageComponent implements OnInit {
     this.displayStories = Stories;
     console.log(this.displayStories);
   }
-  showDetails(selectedId, selectedDetail)
+  showDetails(selectedId, selectedDetail,imageId)
   { 
     this.detailesToShare = selectedDetail;
     (document.getElementById(selectedId).style.display == "block") ?
      document.getElementById(selectedId).style.display = "none"   :
      document.getElementById(selectedId).style.display = "block";
-
-    (document.getElementById(selectedId).style.display != "block") ?
-    this.imgsrc = "./../../../assets/pictures/more.svg":
-    this.imgsrc = "./../../../assets/pictures/less.svg";
-
   }
+  
 }

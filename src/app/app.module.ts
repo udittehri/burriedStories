@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { CommonModule } from '@angular/common';
 import { DetailedStoryComponent } from './components/detailed-story/detailed-story.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    DetailedStoryComponent
+    DetailedStoryComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
