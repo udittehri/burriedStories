@@ -93,3 +93,7 @@ export const Stories = [
     
 
 ]
+
+export default class stories{
+
+}

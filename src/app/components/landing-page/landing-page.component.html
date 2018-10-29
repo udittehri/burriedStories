@@ -4,6 +4,7 @@
       <div class="bg-dark p-4">
         <h5 class="text-white h4">Login or SignUp </h5>
         <span class="text-muted"> <input type="email" name="email" id="user" placeholder="Enter Email or Username" >
+          <label for="GoTo" (click) = "gotoOld()"> Go to MyProfile</label>
           <div *ngIf= "correctEmail">
             <input type="button" (click)="getUser(user)" value="Goooooo !" style="margin: 5px;" class="btn btn-success">
           </div>
@@ -19,8 +20,24 @@
   </div>
   <div class="container mt-2 ">
     <!-- <img src="../../../assets/pictures/mainHead1.jpg" alt="" class="img-fluid"> -->
-    <h1>The Burried Stories of Ravan</h1>
+    <h1>The Burried Stories </h1>
   </div>
+  <div for= "Sorting" class="container mb-3">
+      <div class = " float-left mb-2">
+          <input type="button" value="Add Your Story" class="btn btn-outline-secondary btn-sm ">
+        </div>
+        
+   <div class = " float-right " >
+      <span class = "mr-2"  > Your First  </span>
+      <span class = "mr-2"> A-Z </span>
+      <span class = "mr-2"> Most Recent</span>
+      <span class = "mr-2"> Random</span>
+   </div>
+   
+
+ 
+</div>
+<br>
   <div *ngFor="let story of displayStories" class="container mt-2 border block ">
     <label class="mt-2"> {{story.id}}. <b>{{story.title | uppercase}} </b> </label>
     <p class="ml-3" (click)="showDetails(story.id, story.details)">
@@ -31,6 +48,7 @@
       <app-detailed-story [detailsMessage]=story.details> </app-detailed-story>
     </div>
   </div>
+    
+  
 
-
-</div>
+</div>  

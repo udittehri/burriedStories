@@ -17,6 +17,7 @@ export class LandingPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    // alert("Under Construction")
     this.displayStories = Stories;
     console.log(this.displayStories);
   }
@@ -26,6 +27,9 @@ export class LandingPageComponent implements OnInit {
     (document.getElementById(selectedId).style.display == "block") ?
      document.getElementById(selectedId).style.display = "none"   :
      document.getElementById(selectedId).style.display = "block";
+  }
+  gotoOld() {
+    alert("Not Available")
   }
   
 }

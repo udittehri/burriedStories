@@ -1,0 +1,45 @@
+<div class="mainDiv">
+  <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <h5 class="text-white h4">Login or SignUp </h5>
+        <span class="text-muted"> <input type="email" name="email" id="user" placeholder="Enter Email or Username">
+          <label for="GoTo" (click)="gotoOld()"> Go to MyProfile</label>
+          <div *ngIf="correctEmail">
+            <input type="button" (click)="getUser(user)" value="Goooooo !" style="margin: 5px;" class="btn btn-success">
+          </div>
+        </span>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
+  <div class="container mt-2 ">
+    <!-- <img src="../../../assets/pictures/mainHead1.jpg" alt="" class="img-fluid"> -->
+    <h1>The Burried Stories </h1>
+  </div>
+  <br>
+  <div class="container mt-2 border block myloginBlock ">
+    <h3>Add Your Story</h3>
+    <form (ngSubmit) ="createLoginRequest()" #AddForm="ngForm">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Title for Your Story</label>
+        <input type="email" class="form-control" name="title" id="exampleInputEmail1" [(ngModel)]= "title" aria-describedby="emailHelp" placeholder="Title">
+        <small id="emailHelp" class="form-text text-muted">Displayed on Top</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Your Burried Story</label>
+        <textarea type="password" name="Story"  class="form-control" [(ngModel)]= "story"  id="exampleInputPassword1" placeholder="Your Story"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Publish {{name}}</button>
+    </form>
+
+  </div>
+
+
+
+</div>

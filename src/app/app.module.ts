@@ -7,18 +7,24 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { CommonModule } from '@angular/common';
 import { DetailedStoryComponent } from './components/detailed-story/detailed-story.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { AddMyStoryComponent } from './components/add-my-story/add-my-story.component';
+import { IHopeComponent } from './components/ihope/ihope.component';
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     DetailedStoryComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    AddMyStoryComponent,
+    IHopeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
