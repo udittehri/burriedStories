@@ -10,6 +10,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { AddMyStoryComponent } from './components/add-my-story/add-my-story.component';
 import { IHopeComponent } from './components/ihope/ihope.component';
 import { FormsModule }   from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+// import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,17 @@ import { FormsModule }   from '@angular/forms';
     DetailedStoryComponent,
     LoginPageComponent,
     AddMyStoryComponent,
-    IHopeComponent
+    IHopeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    // HttpClient,
+    // HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

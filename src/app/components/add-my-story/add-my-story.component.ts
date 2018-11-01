@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import stories from './../../FakeDucks/stories'
+import {Stories} from './../../FakeDucks/stories'
 import {HttpClient} from '@angular/common/http';
+import { MyDBsService } from './../../FakeDucks/data/my-dbs.service'
+
 import 'rxjs';
 // import { Observable } from 'rxjs/Rx';
 @Component({
@@ -12,9 +14,12 @@ export class AddMyStoryComponent implements OnInit {
   public title : string = null;
   public story : string = null;
   jsondata : any;
+  data: string;
   private http:HttpClient;
 
-  constructor() { }
+  constructor(
+    private serve : MyDBsService
+  ) { }
 
   ngOnInit() {
     this.jsondata =  this.getdata()
@@ -29,6 +34,11 @@ export class AddMyStoryComponent implements OnInit {
   createLoginRequest()
   {
     console.log("Hello" ,this.title,this.story);
+    this.data ="helllo";
+    debugger
+    this.serve.createDb("iGotData",this.data);
+    debugger
+
   }
 
 }

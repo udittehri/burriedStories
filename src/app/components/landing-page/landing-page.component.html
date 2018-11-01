@@ -1,30 +1,12 @@
 <div class="mainDiv">
-  <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
-        <h5 class="text-white h4">Login or SignUp </h5>
-        <span class="text-muted"> <input type="email" name="email" id="user" placeholder="Enter Email or Username" >
-          <label for="GoTo" (click) = "gotoOld()"> Go to MyProfile</label>
-          <div *ngIf= "correctEmail">
-            <input type="button" (click)="getUser(user)" value="Goooooo !" style="margin: 5px;" class="btn btn-success">
-          </div>
-        </span>
-      </div>
-    </div>
-    <nav class="navbar navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
-  </div>
+ 
   <div class="container mt-2 ">
     <!-- <img src="../../../assets/pictures/mainHead1.jpg" alt="" class="img-fluid"> -->
     <h1>The Burried Stories </h1>
   </div>
   <div for= "Sorting" class="container mb-3">
       <div class = " float-left mb-2">
-          <input type="button" value="Add Your Story" class="btn btn-outline-secondary btn-sm ">
+          <input type="button" value="Add Your Story" [routerLink] = "['/addMyStory']" class="btn btn-outline-secondary btn-sm ">
         </div>
         
    <div class = " float-right " >
